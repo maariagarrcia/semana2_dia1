@@ -96,19 +96,15 @@ def lista_diccionarios_ocupacion(lista):
             lista_diccionarios.append(i)
     print(lista_diccionarios)
 
+# crear una lista de diccionarios donde se guarde la cupacion: doctoral usando  lambda
+def lista_diccionarios_ocupacion_lambda(lista):
+    lista_diccionarios = list(filter(lambda x: x['Education'] == 'Doctoral',lista))
+    print(lista_diccionarios)    
+
+# crear funcion con lambda con map para  obtener una  lista de cadenas
+def lista_cadenas(lista):
+    lista_cadenas = list(map(lambda x: x['First Name'] + " "+ x["Last Name"] + ' tiene' + " " + str(x['Age'])+ "  " +"años ",lista))
+    print(lista_cadenas)   
+
+
 ## INICIO PROGRAMA
-edad_media(citizens)
-print()
-education(citizens)
-print()
-tipos_educacion(citizens)
-print()
-tipos_ocupacion(citizens)
-print()
-lista_diccionarios(citizens)
-print()
-salario_medio_ocupacion(citizens)
-print()
-salario_medio_educacion(citizens)
-print()
-lista_diccionarios_ocupacion(citizens)
